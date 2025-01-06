@@ -1,6 +1,11 @@
 const sumAll = function(numb1, numb2) {
     if (!Number.isInteger(numb1) || !Number.isInteger(numb2)) return "ERROR";
     if (numb1 < 0 || numb2 < 0) return "ERROR";
+    if (numb1 > numb2) {
+        const temp = numb1;
+        numb1 = numb2;
+        numb2 = temp;
+    }
     
     finalSum = 0;
 
